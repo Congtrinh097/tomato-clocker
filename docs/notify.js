@@ -31,6 +31,12 @@ function desktopAlert() {
                 icon: 'assets/tom.gif',
                 body: "Your time is up!!",
             });
+			var audio = new Audio("assets/alert_tone.mp3");
+			
+			setTimeout(()=>audio.play(), 2000);
+			setTimeout(()=>audio.play(), 4000);
+			setTimeout(()=>audio.play(), 6000);
+			
             setTimeout(notification.close.bind(notification), 6000);
             notification.onclick = function () {
                 window.focus();
